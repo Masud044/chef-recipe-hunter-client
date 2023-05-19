@@ -6,6 +6,8 @@ import Main from "../layout/Main";
 
 
 import Home from "../pages/Home";
+import RecipeLayout from "../layout/recipelayout";
+import RecipeDetails from "../pages/RecipeDetails";
 
 
   const router = createBrowserRouter([
@@ -19,6 +21,17 @@ import Home from "../pages/Home";
            }
       ]
     },
+    {
+      path:'recipe',
+      element:<RecipeLayout></RecipeLayout>,
+      children:[
+         {
+            path:':id',
+            element:<RecipeDetails></RecipeDetails>,
+            
+         }
+      ]
+    }
   ]);
   export default router;
   
