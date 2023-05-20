@@ -26,7 +26,7 @@ const RecipeDetails = () => {
     }
    
     return (
-        <div className='container mx-auto mt-2'>
+        <div className='container mx-auto mt-2 mb-12'>
             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure><img src={chef_picture} alt="Album" /></figure>
                 <div className="card-body">

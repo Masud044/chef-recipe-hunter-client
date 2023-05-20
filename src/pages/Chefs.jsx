@@ -17,7 +17,10 @@ const Chefs = () => {
 
 
     return (
+        
+
         <div className='container mx-auto grid lg:grid-cols-3 gap-4 mb-4'>
+             
 
              {
                  recipeData.map(data=>  <Chefcard 

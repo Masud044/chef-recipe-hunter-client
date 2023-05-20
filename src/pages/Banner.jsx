@@ -9,7 +9,7 @@ const Banner = () => {
               <img className='w-full' src={banner} alt="" />
 
               
-
+           
                 
         </div>
     );
