@@ -40,7 +40,7 @@ const RecipeDetails = () => {
         });
         setIsDisabled(true);
     };
-    console.log(isDisabled);
+   // console.log(isDisabled);
 
     return (
         <div className='container mx-auto mt-2 mb-12'>
@@ -70,7 +70,7 @@ const RecipeDetails = () => {
                         {
                             ingredients?.map((i, k) => <li key={k}>{i}</li>)
                         }
-                        <button disabled={disable} className=" bg-lime-800 rounded-lg w-32 p-4 text-white">Add Favorite</button>
+                        <button  className=" bg-lime-800 rounded-lg w-32 p-4 text-white">Add Favorite</button>
                     </div>
                 </div>
                 <div className="card card-compact  bg-base-100 shadow-xl">
@@ -82,7 +82,7 @@ const RecipeDetails = () => {
                         {
                             ingredients?.map((i, k) => <li key={k}>{i}</li>)
                         }
-                        <button disabled={disable} className=" bg-lime-800 rounded-lg w-32 p-4 text-white">Add Favorite</button>
+                        <button  className=" bg-lime-800 rounded-lg w-32 p-4 text-white">Add Favorite</button>
 
                     </div>
                 </div>

@@ -15,10 +15,8 @@ import Register from "../pages/Register";
 
 
   const router = createBrowserRouter([
-    {
-      path:'layout',
-      element:<LoginLayout></LoginLayout>,
-      children:[
+    
+     
          {
            path:'login',
            element:<Login></Login>
@@ -26,9 +24,9 @@ import Register from "../pages/Register";
          {
           path:'register',
           element:<Register></Register>
-         }
-      ]
-    },
+         },
+      
+    
     {
       path: "/",
       element: <Main></Main>,
