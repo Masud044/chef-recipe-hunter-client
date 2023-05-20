@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import Header from './Header';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
+    const[error,setError]=useState('');
 
     const handleRegister = event => {
         event.preventDefault();
@@ -23,12 +25,14 @@ const Register = () => {
             })
             .catch(error => {
                 console.log(error);
+                setError(error.message);
             })
     }
     return (
-        <div className='container mx-auto mt-20'>
-
-            <h1 className='text-center font-bold text-2xl'>Please Register</h1>
+        <div className='container mx-auto'>
+               
+               <Header></Header>
+            <h1 className='text-center font-bold text-2xl mt-4'>Please Register</h1>
             <div className="hero  bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
 
@@ -59,12 +63,14 @@ const Register = () => {
                                 </label>
                                 <input type="text" name='photo' placeholder="Photo Url" className="input input-bordered" required />
                             </div>
+                            <p className='text-red-600'>{error}</p>
                             <div className="form-control mt-6">
                                 <button type='submit' className="btn btn-primary">Register</button>
                             </div>
                             <label className="label">
                                 Already Have an Account?<Link to='/login' className='text-lime-950 font-semibold'>Login</Link>
                             </label>
+                            
 
                         </form>
                     </div>
