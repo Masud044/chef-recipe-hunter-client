@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import Header from './Header';
 
 const Login = () => {
     const {signIn} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location)
+    const from = location.state?.from?.pathname || '/';
 
   const handleLogin=event=>{
      event.preventDefault();
@@ -16,6 +20,7 @@ const Login = () => {
        .then(result => {
            const loggedUser = result.user;
            console.log(loggedUser);
+           navigate(from,{replace:true})
           // navigate(from, { replace: true })
        })
        .catch(error => {
@@ -23,8 +28,8 @@ const Login = () => {
        })
   }
     return (
-        <div className='container mx-auto mt-20'>
-               
+        <div className='container mx-auto'>
+               <Header></Header>
             <h1 className='text-center font-bold text-2xl'>Please login</h1>
             <div className="hero  bg-base-200">
                 <div  className="hero-content flex-col lg:flex-row-reverse">

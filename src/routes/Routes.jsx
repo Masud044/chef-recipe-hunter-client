@@ -12,6 +12,7 @@ import Blog from "../pages/Blog";
 import LoginLayout from "../layout/LoginLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
   const router = createBrowserRouter([
@@ -46,11 +47,11 @@ import Register from "../pages/Register";
    
     {
       path:'recipe',
-      element:<RecipeLayout></RecipeLayout>,
+      element:<PrivateRoute><RecipeLayout></RecipeLayout></PrivateRoute>,
       children:[
          {
             path:':id',
-            element:<RecipeDetails></RecipeDetails>,
+            element: <RecipeDetails></RecipeDetails> ,
             
          }
       ]
