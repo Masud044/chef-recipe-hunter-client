@@ -3,13 +3,16 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaHandPointRight } from "react-icons/fa";
 
 
 const RecipeDetails = () => {
     const { id } = useParams();
     const [recipe, setRecipe] = useState([]);
-    
+
     const [isDisabled, setIsDisabled] = useState(false);
+    const [isDisabled1, setIsDisabled1] = useState(false);
+    const [isDisabled2, setIsDisabled2] = useState(false);
     //console.log(id)
     useEffect(() => {
         fetch(`http://localhost:5000/recipe/${id}`)
@@ -40,7 +43,33 @@ const RecipeDetails = () => {
         });
         setIsDisabled(true);
     };
-   // console.log(isDisabled);
+    const handleClick1 = () => {
+        toast('Added Successfully!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+        setIsDisabled1(true);
+    };
+    const handleClick2 = () => {
+        toast('Added Successfully!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+        setIsDisabled2(true);
+    };
+    // console.log(isDisabled);
 
     return (
         <div className='container mx-auto mt-2 mb-12'>
@@ -52,7 +81,8 @@ const RecipeDetails = () => {
 
                     <p className='mb-0'> <span className=' text-lime-800'>Years of experience:</span>  {years_of_experience}</p>
                     <p className='lg:-mt-20'><span className='text-lime-800'>Numbers of recipes</span> : {num_recipes}</p>
-                    <p className='lg:-mt-20'> <span className='text-lime-900 font-medium'>Likes</span> :123344</p>
+                    <p className='lg:-mt-20  font-medium flex justify-items-center items-center'> <FaHandPointRight className='text-cyan-500'></FaHandPointRight>
+                   : 123344</p>
 
 
 
@@ -70,7 +100,16 @@ const RecipeDetails = () => {
                         {
                             ingredients?.map((i, k) => <li key={k}>{i}</li>)
                         }
-                        <button  className=" bg-lime-800 rounded-lg w-32 p-4 text-white">Add Favorite</button>
+                       
+                       <button
+
+                            onClick={handleClick}
+                            disabled={isDisabled}
+                            className="bg-lime-800 w-full rounded-lg btn w-32 p-4 text-white"
+                        >
+                            Add Favorite
+                        </button>
+                        <ToastContainer />
                     </div>
                 </div>
                 <div className="card card-compact  bg-base-100 shadow-xl">
@@ -82,8 +121,15 @@ const RecipeDetails = () => {
                         {
                             ingredients?.map((i, k) => <li key={k}>{i}</li>)
                         }
-                        <button  className=" bg-lime-800 rounded-lg w-32 p-4 text-white">Add Favorite</button>
+                        <button
 
+                            onClick={handleClick1}
+                            disabled={isDisabled1}
+                            className="bg-lime-800 w-full rounded-lg btn w-32 p-4 text-white"
+                        >
+                            Add Favorite
+                        </button>
+                        <ToastContainer />
                     </div>
                 </div>
                 <div className="card card-compact  bg-base-100 shadow-xl">
@@ -99,14 +145,14 @@ const RecipeDetails = () => {
 
                         <button
 
-                            onClick={handleClick}
-                            disabled={isDisabled}
+                            onClick={handleClick2}
+                            disabled={isDisabled2}
                             className="bg-lime-800 w-full rounded-lg btn w-32 p-4 text-white"
                         >
                             Add Favorite
                         </button>
                         <ToastContainer />
-                       
+
 
 
                     </div>
