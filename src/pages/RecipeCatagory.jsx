@@ -3,7 +3,7 @@ import React from 'react';
 const RecipeCatagory = () => {
     return (
         <div className='container mx-auto mt-10 '>
-            <h1 className='text-center font-bold text-3xl mb-8'>Recipe Categories</h1>
+            <h1 className='text-center font-bold  text-lime-800 text-3xl mb-8'>Recipe Categories</h1>
 
             <div className='lg:flex gap-4  bg-lime-100 py-4'>
                 <div className='mb-6'>
