@@ -8,6 +8,7 @@ import Main from "../layout/Main";
 import Home from "../pages/Home";
 import RecipeLayout from "../layout/recipelayout";
 import RecipeDetails from "../pages/RecipeDetails";
+import Blog from "../pages/Blog";
 
 
   const router = createBrowserRouter([
@@ -18,9 +19,16 @@ import RecipeDetails from "../pages/RecipeDetails";
            {
              path:'/',
              element:<Home></Home>
-           }
+           },
+           
       ]
     },
+    {
+      path:'blog',
+      element:<Blog></Blog>
+     },
+    
+   
     {
       path:'recipe',
       element:<RecipeLayout></RecipeLayout>,
