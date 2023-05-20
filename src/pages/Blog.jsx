@@ -1,5 +1,8 @@
 import React from 'react';
 import Header from './Header';
+import Pdf from "react-to-pdf";
+import ReactDOM from "react-dom";
+const ref = React.createRef();
 
 const Blog = () => {
     return (
@@ -8,7 +11,12 @@ const Blog = () => {
             <div className='mb-20'>
                 <Header></Header>
             </div>
-            <div>
+            <div className='mb-4 '>
+                <Pdf targetRef={ref} filename="code-example.pdf">
+                {({ toPdf }) => <button onClick={toPdf} className='bg-lime-600 p-2 text-white rounded'>Download Pdf</button>}
+                </Pdf>
+            </div>
+            <div ref={ref}>
                 <div className='border-2 border-lime-700 p-4 mb-4'>
                     <h1 className='text-2xl font-medium'>Tell us the differences between uncontrolled and controlled components:</h1>
                     <p className='font-serif'>In React, controlled components refer to components that have their state and behavior controlled by the parent component. These components rely on props passed down from the parent component to update their state and behavior. Uncontrolled components refer to components that manage their own state internally</p>
