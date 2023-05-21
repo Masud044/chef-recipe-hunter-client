@@ -20,7 +20,7 @@ const RecipeDetails = () => {
             .then(data => setRecipe(data))
     }, [])
 
-    const { chef_name, chef_picture, ingredients, recipe_name1, recipe_name2, recipe_name3, instructions, num_recipes, years_of_experience, rating } = recipe;
+    const { chef_name, chef_picture, ingredients, recipe_name1, recipe_name2, recipe_name3, instructions, num_recipes, years_of_experience, rating,chef_bio } = recipe;
 
 
     //console.log(recipe_name)
@@ -77,11 +77,11 @@ const RecipeDetails = () => {
                 <figure><img src={chef_picture} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{chef_name}</h2>
+                     <p className=''>{chef_bio}</p>
 
-
-                    <p className='mb-0'> <span className=' text-lime-800'>Years of experience:</span>  {years_of_experience}</p>
-                    <p className='lg:-mt-20'><span className='text-lime-800'>Numbers of recipes</span> : {num_recipes}</p>
-                    <p className='lg:-mt-20  font-medium flex justify-items-center items-center'> <FaHandPointRight className='text-cyan-500'></FaHandPointRight>
+                    <p className=''> <span className=' text-lime-800'>Years of experience:</span>  {years_of_experience}</p>
+                    <p className=''><span className='text-lime-800'>Numbers of recipes</span> : {num_recipes}</p>
+                    <p className='  font-medium flex justify-items-center items-center'> <FaHandPointRight className='text-cyan-500'></FaHandPointRight>
                    : 123344</p>
 
 

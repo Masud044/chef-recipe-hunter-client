@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import Chefcard from './Chefcard';
+import { ColorRing } from 'react-loader-spinner';
 
 
 const Chefs = () => {
 
     const [recipeData, setRecipeData] = useState([]);
-
+   
     useEffect(() => {
         fetch("http://localhost:5000/recipe")
             .then(res => res.json())
             .then(data => setRecipeData(data))
             .catch(error => console.log(error))
+            
     }, [])
     // console.log(recipeData)
 
-
+    
 
     return (
-
+        
 
         <div>
               <h1 className='text-center text-3xl text-lime-800 mb-10 font-bold'>Our Chefs</h1>

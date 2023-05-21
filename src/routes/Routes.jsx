@@ -13,11 +13,15 @@ import LoginLayout from "../layout/LoginLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import Notfound from "../pages/Notfound";
 
 
   const router = createBrowserRouter([
     
-     
+        {
+            path:'*',
+            element:<Notfound></Notfound>
+        },
          {
            path:'login',
            element:<Login></Login>

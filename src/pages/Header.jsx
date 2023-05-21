@@ -37,7 +37,8 @@ const Header = () => {
             <div className="navbar-end">
                 {
                  user &&   <p>
-                   <FaUserCircle className='text-white text-3xl'>{user}</FaUserCircle>
+                   <FaUserCircle className='text-white text-3xl'></FaUserCircle>
+                   
                 </p>
                 }
                  
