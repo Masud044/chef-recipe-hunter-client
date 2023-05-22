@@ -3,7 +3,7 @@ import { FaSadTear } from "react-icons/fa";
 
 const Notfound = () => {
     return (
-        <div className='border-2 border-red-500'>
+        <div className=''>
              <div className='text-6xl grid justify-items-center mt-40'>
                  <FaSadTear className='text-orange-400'></FaSadTear>
              </div>

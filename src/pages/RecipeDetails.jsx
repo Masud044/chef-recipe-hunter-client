@@ -15,7 +15,7 @@ const RecipeDetails = () => {
     const [isDisabled2, setIsDisabled2] = useState(false);
     //console.log(id)
     useEffect(() => {
-        fetch(`http://localhost:5000/recipe/${id}`)
+        fetch(`https://assignment-serversite-10-masud044.vercel.app/recipe/${id}`)
             .then(res => res.json())
             .then(data => setRecipe(data))
     }, [])
