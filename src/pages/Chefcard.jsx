@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaHandPointRight } from "react-icons/fa";
 
 const Chefcard = ({data}) => {
@@ -19,7 +19,12 @@ const Chefcard = ({data}) => {
                     <p className='font-medium flex justify-items-center items-center'> <FaHandPointRight className='text-cyan-500'></FaHandPointRight>
                    : 123344</p>
                     <div className="card-actions justify-end">
-                      <Link to={`/recipe/${id}`}> <button className="bg-lime-800 p-4 rounded-lg text-white">View recipe</button></Link> 
+                      <NavLink to={`/recipe/${id}`}  style={({ isActive, isPending }) => {
+                            return {
+                              fontWeight: isActive ? "bold" : "",
+                              color: isPending ? "red" : "black",
+                            };
+                          }} > <button className="bg-lime-800 p-4 rounded-lg text-white">View recipe</button></NavLink> 
                     </div>
                 </div>
 
