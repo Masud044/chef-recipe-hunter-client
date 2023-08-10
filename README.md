@@ -51,4 +51,4 @@ To run this project, you will need to add the following environment variables to
 Any additional information goes here
 
 
-## project live link : 
+## project live link : https://assignment-clientsite-10.web.app/
