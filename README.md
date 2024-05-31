@@ -27,7 +27,7 @@ To deploy this project run
   npm run deploy
 ```
 
-## Server-Site: https:
+## Server-Site: 
  https://github.com/Masud044/chef-recipe-hunter-server
 
 
