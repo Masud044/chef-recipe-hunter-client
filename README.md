@@ -1,57 +1,22 @@
-﻿# b7a10-chef-recipe-hunter-client-side-Masud044
+## Chef-recipe-hunter
+chef-recipe-hunter is a website dedicated to showcasing the best chefs and their recipes from around the world. Our goal is to provide a platform for chefs to share their expertise and passion for cooking with food lovers everywhere.
 
-## Features
+# Features
+- Browse chef profiles to learn about best recipes and cooking method.
+- Read reviews and ratings from other users to help you decide which recipes to try.
+- Firebase authentication.
 
-- Hosted by firebase
-- Heroicons
-- Tailwind css
-- React router Dom v6.4
+## Technologies Used
+- Vite-React
+- React Router Dom v6.10.0
+- Tailwindcss
+- React-toastify
+- Firebase
+- ExpressJs
+- SwiperJs
 
-
-## Documentation
-
-[heroicons](https://heroicons.com/)
-
-[Tailwind css](https://tailwindcss.com/)
-
-[React router js](https://reactrouter.com/en/main)
-
-
-
-
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
-
-## Server-Site: 
- https://github.com/Masud044/chef-recipe-hunter-server
+## Contributing
+We welcome contributions from anyone interested in improving Chef's recipe. Whether you find a bug, have an idea for a new feature, or just want to make a suggestion, please open an issue or submit a pull request.
 
 
-## Installation
-
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
-    
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-
-## Appendix
-
-Any additional information goes here
-
-
-## project live link : https://assignment-clientsite-10.web.app/
+# project live link : https://assignment-clientsite-10.web.app/
