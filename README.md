@@ -19,4 +19,5 @@ chef-recipe-hunter is a website dedicated to showcasing the best chefs and their
 We welcome contributions from anyone interested in improving Chef's recipe. Whether you find a bug, have an idea for a new feature, or just want to make a suggestion, please open an issue or submit a pull request.
 
 
-# project live link : https://assignment-clientsite-10.web.app/
+# project live link 
+https://assignment-clientsite-10.web.app/
